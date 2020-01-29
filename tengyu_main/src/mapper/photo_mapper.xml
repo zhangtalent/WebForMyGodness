@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="z.talent.tengyu.mapper.PhotoMapper">
+
+
+	<update id="updateNumber" parameterType="int">
+		update 
+			photonumber 
+		set number = number+1
+		where
+			Id = #{id}
+	</update>
+
+
+
+	
+	<select id="getNumber" resultType="int">
+		select 
+			number 
+		from 
+			photonumber 
+		limit 1
+	</select>
+
+	
+</mapper>  
